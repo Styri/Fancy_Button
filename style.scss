@@ -1,37 +1,43 @@
-@mixin flexCenter () {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+@import './flexCenter'; 
+@import './buttonStyle'; //import mixins files
+@import './buttonHover'; 
 
-@mixin basicButton ($color) {
-    background: none;
-    border:2px solid;
-    padding: 1em 2em;
-    font-size: 1em;
-    transition: color 0.25s, border-color 0.25s, box-shadow 0.25s, transform 0.25s ;
-    color : $color;
-}
 
-body{
-    @include flexCenter();
+body{ 
+    @include flexCenter(); //call flexCenter mixin to inherit center position
     font-family: 'Roboto', sans-serif;
-    height:100vh;
+    height: 100vh;
     background-color: #151b29;
     background-image: url(christian-lue-YVZX2ksshrM-unsplash.jpg);
-    background-size:cover;
+    background-size: cover;
     background-position: 50%;
 }
 
-button{
-    @include basicButton(#ffa260;);
-    
-   
+#button1{
+    @include buttonStyle(rgb(232, 59, 11));    
 }
-button:hover{
-    border-color: #f1ff5c;
-    color:white;
-    box-shadow: 0 0.5em 0.5em -0.4em #f1ff5c;
-    transform: translateY(-0.25em);
-    cursor: pointer;   
+
+#button2{
+    @include buttonStyle(rgb(217, 150, 25));    //call buttonStyle mixin which has a color variable that needs to be adjusted each time
+}
+
+#button3{
+    @include buttonStyle(rgb(20, 177, 86));    
+}
+
+#button1:hover{
+    @include buttonHover(black, 1em 1.5em 1.5em -0.4em, translateX(-2em) );
+    
+}
+
+#button2:hover{
+    @include buttonHover(white, 0em 0.5em 0.5em -0.4em, translateY(-0.25em) );//call buttonHover mixin and adjust color, shadow effects and position
+}
+
+#button3:hover{
+    @include buttonHover(rgb(100, 100, 181), -1.5em 0.5em 0.5em -0.4em, translateX(0.75em) );
+}
+
+.fancy::first-letter{
+    color: rgb(183, 181, 181);
 }

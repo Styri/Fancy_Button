@@ -10,19 +10,63 @@ body {
   background-position: 50%;
 }
 
-button {
+#button1 {
   background: none;
-  border: 2px solid;
-  padding: 1em 2em;
-  font-size: 1em;
+  color: rgb(232, 59, 11);
+  border: 3px solid;
+  border-radius: 0.3em;
+  margin: 1.5em;
+  padding: 1.5em 2em;
+  font-size: 1.5em;
   transition: color 0.25s, border-color 0.25s, box-shadow 0.25s, transform 0.25s;
-  color: #ffa260;
 }
 
-button:hover {
-  border-color: #f1ff5c;
+#button2 {
+  background: none;
+  color: rgb(217, 150, 25);
+  border: 3px solid;
+  border-radius: 0.3em;
+  margin: 1.5em;
+  padding: 1.5em 2em;
+  font-size: 1.5em;
+  transition: color 0.25s, border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+}
+
+#button3 {
+  background: none;
+  color: rgb(20, 177, 86);
+  border: 3px solid;
+  border-radius: 0.3em;
+  margin: 1.5em;
+  padding: 1.5em 2em;
+  font-size: 1.5em;
+  transition: color 0.25s, border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+}
+
+#button1:hover {
+  border-color: black;
   color: white;
-  box-shadow: 0 0.5em 0.5em -0.4em #f1ff5c;
+  box-shadow: 1em 1.5em 1.5em -0.4em;
+  transform: translateX(-2em);
+  cursor: pointer;
+}
+
+#button2:hover {
+  border-color: white;
+  color: white;
+  box-shadow: 0em 0.5em 0.5em -0.4em;
   transform: translateY(-0.25em);
   cursor: pointer;
+}
+
+#button3:hover {
+  border-color: rgb(100, 100, 181);
+  color: white;
+  box-shadow: -1.5em 0.5em 0.5em -0.4em;
+  transform: translateX(0.75em);
+  cursor: pointer;
+}
+
+.fancy::first-letter {
+  color: rgb(183, 181, 181);
 }/*# sourceMappingURL=style.css.map */

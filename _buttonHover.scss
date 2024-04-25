@@ -1,0 +1,9 @@
+@mixin buttonHover ($border-color, $box-shadow, $transform) {
+    border-color: $border-color;
+    color:white;
+    box-shadow: $box-shadow;
+    transform: $transform;
+    cursor: pointer;  
+
+
+}
