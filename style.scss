@@ -1,6 +1,7 @@
 @import './flexCenter'; 
-@import './buttonStyle'; //import mixins files
+@import './buttonStyle'; //import mixin files
 @import './buttonHover'; 
+$navColor:
 
 
 body{ 
@@ -35,7 +36,7 @@ body{
 }
 
 #button3:hover{
-    @include buttonHover(rgb(100, 100, 181), -1.5em 0.5em 0.5em -0.4em, translateX(0.75em) );
+    @include buttonHover(purple), -1.5em 0.5em 0.5em -0.4em, translateX(0.75em) ;
 }
 
 .fancy::first-letter{
