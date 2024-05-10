@@ -1,8 +1,6 @@
 @import './flexCenter'; 
 @import './buttonStyle'; //import mixin files
 @import './buttonHover'; 
-$navColor:
-
 
 body{ 
     @include flexCenter(); //call flexCenter mixin to inherit center position
@@ -17,11 +15,9 @@ body{
 #button1{
     @include buttonStyle(rgb(232, 59, 11));    
 }
-
 #button2{
     @include buttonStyle(rgb(217, 150, 25));    //call buttonStyle mixin which has a color variable that needs to be adjusted each time
 }
-
 #button3{
     @include buttonStyle(rgb(20, 177, 86));    
 }
@@ -36,7 +32,7 @@ body{
 }
 
 #button3:hover{
-    @include buttonHover(purple), -1.5em 0.5em 0.5em -0.4em, translateX(0.75em) ;
+    @include buttonHover(purple, -1.5em 0.5em 0.5em -0.4em, translateX(0.75em) );
 }
 
 .fancy::first-letter{
